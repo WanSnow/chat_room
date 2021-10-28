@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "chatRooms/model/chat_room";
+
+package proto.model.chat_room;
+
+message RoomMap{
+  string room_id = 1;
+  Room start_room = 2;
+  repeated Room all_rooms = 3;
+}
+
+message Room{
+  string name = 1;
+  repeated Room can_entry_room = 2;
+}
